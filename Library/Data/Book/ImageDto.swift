@@ -1,5 +1,5 @@
 //
-//  Api.swift
+//  ImageDto.swift
 //  Library
 //
 //  Created by Hessam Mahdiabadi on 9/30/23.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol Api {
+struct ImageDto: Decodable {
     
-    func callApi(route: ApiRouter) async throws -> Data
+    var id: Int
+    var url: String
 }
