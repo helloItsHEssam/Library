@@ -23,8 +23,14 @@ struct DetailOfBook: View {
             GeometryReader { geo in
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 32) {
+                        BackButton {
+                            navigationManager.back()
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                        
                         BasicInformationOfBook(screenWidth: geo.size.width,
                                                book: viewModel.book)
+                        .offset(x: 0, y: -42)
+                        
                         PublishingInformationOfBook(book: viewModel.book)
                         AboutItem(book: viewModel.book)
                             .padding([.top], 20)
@@ -41,6 +47,6 @@ struct DetailOfBook: View {
                 }
             }
         }
-//        .navigationBarHidden(true)
+        .navigationBarHidden(true)
     }
 }

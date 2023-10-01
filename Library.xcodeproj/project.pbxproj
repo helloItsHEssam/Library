@@ -78,6 +78,7 @@
 		DE89DF572AC9A9B70076EE57 /* PublishingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF562AC9A9B70076EE57 /* PublishingItem.swift */; };
 		DE89DF5A2AC9ABA20076EE57 /* AboutBookText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF592AC9ABA20076EE57 /* AboutBookText.swift */; };
 		DE89DF5C2AC9ABB90076EE57 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF5B2AC9ABB90076EE57 /* AboutItem.swift */; };
+		DE89DF5E2AC9C07F0076EE57 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF5D2AC9C07F0076EE57 /* BackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		DE89DF562AC9A9B70076EE57 /* PublishingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishingItem.swift; sourceTree = "<group>"; };
 		DE89DF592AC9ABA20076EE57 /* AboutBookText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBookText.swift; sourceTree = "<group>"; };
 		DE89DF5B2AC9ABB90076EE57 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
+		DE89DF5D2AC9C07F0076EE57 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -640,6 +642,7 @@
 				DE89DF282AC959850076EE57 /* ViewAlignment.swift */,
 				DE89DF2A2AC95BF80076EE57 /* BookImage.swift */,
 				DE89DF2C2AC9637D0076EE57 /* NameOfAuthorText.swift */,
+				DE89DF5D2AC9C07F0076EE57 /* BackButton.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				DE0432782AC830D500748682 /* Person.swift in Sources */,
 				DE89DF1D2AC948D20076EE57 /* NavigationRouter.swift in Sources */,
 				DE04326B2AC82D3700748682 /* BookUseCaseImpl.swift in Sources */,
+				DE89DF5E2AC9C07F0076EE57 /* BackButton.swift in Sources */,
 				DE04326E2AC82D5100748682 /* BookRepositoryImpl.swift in Sources */,
 				DE89DF482AC98F230076EE57 /* OfflineServerMockURLProtocol.swift in Sources */,
 				DE89DF2F2AC964D80076EE57 /* NameOfBookText.swift in Sources */,
