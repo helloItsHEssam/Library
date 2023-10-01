@@ -73,4 +73,61 @@ final class BookViewModelTests: XCTestCase {
         viewModel.fetchFavoriteBooks()
         wait(for: [expectation], timeout: 5.0)
     }
+    
+    func testFetchBook() {
+        
+        // given
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [MockURLProtocol.self]
+        let api = ApiImpl(configuration: configuration)
+        let repository = BookRepositoryImpl(api: api)
+        let useCase = BookUseCaseImpl(repository: repository)
+        
+        let viewModel = BookViewModel(useCase: useCase)
+
+        let expectation = XCTestExpectation(description: "fetch book")
+        
+        viewModel.$book
+            .dropFirst()
+            .sink(receiveValue: {
+                
+                // then
+                XCTAssertEqual($0?.name, "The Hobbit (The Lord of the Rings)")
+                expectation.fulfill()
+            })
+            .store(in: &cancellables)
+        
+        //When
+        viewModel.fetchBook(bookId: 3)
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testOfflineFetchBook() {
+        
+        // given
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [OfflineServerMockURLProtocol.self]
+        let api = ApiImpl(configuration: configuration)
+        let repository = BookRepositoryImpl(api: api)
+        let useCase = BookUseCaseImpl(repository: repository)
+        
+        let viewModel = BookViewModel(useCase: useCase)
+
+        let expectation = XCTestExpectation(description: "fetch book")
+        
+        viewModel.$errorOfDetail
+            .dropFirst()
+            .sink(receiveValue: {
+                
+                // then
+                XCTAssertEqual($0.show, true)
+                XCTAssertEqual($0.message, "You seem to be offline!")
+                expectation.fulfill()
+            })
+            .store(in: &cancellables)
+        
+        //When
+        viewModel.fetchBook(bookId: 33)
+        wait(for: [expectation], timeout: 5.0)
+    }
 }

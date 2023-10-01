@@ -24,19 +24,23 @@ struct DetailOfBook: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 32) {
                         BasicInformationOfBook(screenWidth: geo.size.width,
-                                               book: nil)
-                        PublishingInformationOfBook(book: nil)
-                        AboutItem(book: nil)
+                                               book: viewModel.book)
+                        PublishingInformationOfBook(book: viewModel.book)
+                        AboutItem(book: viewModel.book)
                             .padding([.top], 20)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
                 .modifier(ViewAlignment(alignment: .center))
                 .onAppear {
-    //                viewModel.fetchFavoriteBooks()
+                    viewModel.fetchBook(bookId: bookId)
+                }
+                
+                Alert(content: $viewModel.errorOfDetail) {
+                    viewModel.fetchBook(bookId: bookId)
                 }
             }
         }
-        .navigationBarHidden(true)
+//        .navigationBarHidden(true)
     }
 }

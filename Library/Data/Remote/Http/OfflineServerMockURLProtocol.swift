@@ -49,6 +49,15 @@ final class OfflineServerMockURLProtocol: URLProtocol {
                                             httpResponse: httpResponse,
                                             error: URLError(URLError.Code.badURL))
         
-        return [url: booksResponse]
+        let strUrl2 = "http://localhost:8080/book/33"
+        let url2 = URL(string: strUrl2)!
+        let data2 = "offline server".data(using: .utf8)
+        let httpResponse2 = HTTPURLResponse(url: url2, statusCode: 400,
+                                            httpVersion: nil, headerFields: nil)
+        let bookResponse = ApiMockResponse(url: url2, data: data2,
+                                            httpResponse: httpResponse2,
+                                            error: URLError(URLError.Code.badURL))
+        
+        return [url: booksResponse, url2: bookResponse]
     }
 }

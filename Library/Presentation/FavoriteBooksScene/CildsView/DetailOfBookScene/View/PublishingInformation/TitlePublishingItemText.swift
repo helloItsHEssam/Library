@@ -18,7 +18,6 @@ struct TitlePublishingItemText: View {
     var body: some View {
         Text(content)
             .font(.custom(Raleway.weight(.extraBold), size: 14))
-            .lineLimit(1)
             .foregroundColor(.primaryText)
     }
 }

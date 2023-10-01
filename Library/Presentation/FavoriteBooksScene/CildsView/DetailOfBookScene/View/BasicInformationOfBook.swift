@@ -25,6 +25,7 @@ struct BasicInformationOfBook: View {
                     .frame(width: width, height: height)
                 VStack(spacing: 12) {
                     TitleText(content: book?.name ?? "-")
+                        .multilineTextAlignment(.center)
                     NameOfAuthorText(author: book?.author,
                                      fontSize: 18, lineLimit: nil)
                 }

@@ -18,7 +18,6 @@ struct ValuePublishingItemText: View {
     var body: some View {
         Text(content)
             .font(.custom(Raleway.weight(.semiBold), size: 14))
-            .lineLimit(1)
             .foregroundColor(.secondrayText)
     }
 }
