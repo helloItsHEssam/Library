@@ -51,6 +51,7 @@
 		DE25F6962AC770000085D4C6 /* RalewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE25F6952AC770000085D4C6 /* RalewayTests.swift */; };
 		DE89DF092AC9350C0076EE57 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF082AC9350C0076EE57 /* GeneralError.swift */; };
 		DE89DF0C2AC935640076EE57 /* BookRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF0B2AC935640076EE57 /* BookRepositoryImplTests.swift */; };
+		DE89DF122AC942F00076EE57 /* BookUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF112AC942F00076EE57 /* BookUseCaseImplTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		DE25F6952AC770000085D4C6 /* RalewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RalewayTests.swift; sourceTree = "<group>"; };
 		DE89DF082AC9350C0076EE57 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 		DE89DF0B2AC935640076EE57 /* BookRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryImplTests.swift; sourceTree = "<group>"; };
+		DE89DF112AC942F00076EE57 /* BookUseCaseImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUseCaseImplTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 		DE04328E2AC83BFF00748682 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DE89DF0D2AC9423B0076EE57 /* UseCases */,
 				DE04328F2AC83C0400748682 /* Entities */,
 			);
 			path = Domain;
@@ -471,6 +474,22 @@
 			path = Book;
 			sourceTree = "<group>";
 		};
+		DE89DF0D2AC9423B0076EE57 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DE89DF0E2AC942450076EE57 /* Book */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DE89DF0E2AC942450076EE57 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				DE89DF112AC942F00076EE57 /* BookUseCaseImplTests.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -642,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0432892AC836F200748682 /* ImageMapperTests.swift in Sources */,
+				DE89DF122AC942F00076EE57 /* BookUseCaseImplTests.swift in Sources */,
 				DE0432962AC83CCB00748682 /* ImageTests.swift in Sources */,
 				DE0432922AC83C1800748682 /* BookTests.swift in Sources */,
 				DE0432642AC810AE00748682 /* ApiRouterTests.swift in Sources */,

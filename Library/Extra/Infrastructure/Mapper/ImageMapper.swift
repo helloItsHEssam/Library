@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ImageMapper: Mapper {
+final class ImageMapper: Mapper {
     
     typealias Dto = ImageDto?
     typealias Entity = Image?

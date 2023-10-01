@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PersonMapper: Mapper {
+final class PersonMapper: Mapper {
 
     typealias Dto = PersonDto
     typealias Entity = Person
