@@ -30,7 +30,7 @@ final class NavigationManagerTests: XCTestCase {
     func testGoToDetailOfBookPage() {
         
         // when
-        navigationManager?.goToDetailOfBookPage()
+        navigationManager?.goToDetailOfBookPage(bookdId: 1)
         
         // then
         XCTAssertFalse(navigationManager?.isEmpty ?? true)
@@ -39,7 +39,7 @@ final class NavigationManagerTests: XCTestCase {
     func testBack() {
         
         // when
-        navigationManager?.goToDetailOfBookPage()
+        navigationManager?.goToDetailOfBookPage(bookdId: 1)
         navigationManager?.back()
         
         // then
@@ -49,8 +49,8 @@ final class NavigationManagerTests: XCTestCase {
     func testDoubleGoToGamePage() {
         
         // when
-        navigationManager?.goToDetailOfBookPage()
-        navigationManager?.goToDetailOfBookPage()
+        navigationManager?.goToDetailOfBookPage(bookdId: 1)
+        navigationManager?.goToDetailOfBookPage(bookdId: 2)
         
         // then
         XCTAssertEqual(navigationManager?.countOfPages, 2)
@@ -59,8 +59,8 @@ final class NavigationManagerTests: XCTestCase {
     func testPopToRoot() {
         
         // when
-        navigationManager?.goToDetailOfBookPage()
-        navigationManager?.goToDetailOfBookPage()
+        navigationManager?.goToDetailOfBookPage(bookdId: 1)
+        navigationManager?.goToDetailOfBookPage(bookdId: 2)
         navigationManager?.popToRoot()
         
         // then

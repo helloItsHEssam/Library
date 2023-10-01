@@ -15,11 +15,17 @@ struct FavoriteBooks: View {
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
             ZStack {
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 32) {
                         TitleText(content: "Favorite Books")
                         GridBook(books: viewModel.books) { bookTapped in
-                            navigationManager.goToDetailOfBookPage()
+                            navigationManager.goToDetailOfBookPage(bookdId: bookTapped.id)
+                        }
+                        .navigationDestination(for: NavigationRouter.self) { route in
+                            switch route {
+                            case .detailOfBookScene(let bookId):
+                                DetailOfBook(viewModel: viewModel, bookId: bookId)
+                            }
                         }
                     }
                 }
@@ -31,11 +37,6 @@ struct FavoriteBooks: View {
                 Alert(content: $viewModel.error) {
                     viewModel.fetchFavoriteBooks()
                 }
-            }
-        }
-        .navigationDestination(for: NavigationRouter.self) { route in
-            switch route {
-            case .detailOfBookScene: DetailOfBook()
             }
         }
         .environmentObject(navigationManager)

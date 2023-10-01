@@ -1,5 +1,5 @@
 //
-//  NameOfBookText.swift
+//  ValuePublishingItemText.swift
 //  Library
 //
 //  Created by Hessam Mahdiabadi on 10/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NameOfBookText: View {
+struct ValuePublishingItemText: View {
 
     private var content: String
 
@@ -17,8 +17,7 @@ struct NameOfBookText: View {
     
     var body: some View {
         Text(content)
-            .font(.custom(Raleway.weight(.regular), size: 12))
-            .lineLimit(1)
-            .foregroundColor(.primaryText)
+            .font(.custom(Raleway.weight(.semiBold), size: 14))
+            .foregroundColor(.secondrayText)
     }
 }

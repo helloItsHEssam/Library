@@ -27,7 +27,7 @@ class NavigationManager: ObservableObject {
         path.removeLast()
     }
 
-    func goToDetailOfBookPage() {
-        path.append(NavigationRouter.detailOfBookScene)
+    func goToDetailOfBookPage(bookdId: Int) {
+        path.append(NavigationRouter.detailOfBookScene(bookId: bookdId))
     }
 }

@@ -11,5 +11,5 @@ import Foundation
 
 enum NavigationRouter: Hashable {
     
-    case detailOfBookScene
+    case detailOfBookScene(bookId: Int)
 }
