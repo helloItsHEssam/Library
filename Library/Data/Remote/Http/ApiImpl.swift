@@ -10,17 +10,16 @@ import Alamofire
 
 final class ApiImpl: Api {
     
-    static var `default` = ApiImpl()
     private var sessionManager: Session
     
-    private init() {
-        let configuration = URLSessionConfiguration.default
-        
 #if DEBUG
-        configuration.protocolClasses = [MockURLProtocol.self]
+    required init(configuration: URLSessionConfiguration) {
+        sessionManager = Session(configuration: configuration)
+    }
 #endif
 
-        sessionManager = Session(configuration: configuration)
+    init() {
+        sessionManager = Session()
     }
     
     func callApi(route: ApiRouter) async throws -> Data {

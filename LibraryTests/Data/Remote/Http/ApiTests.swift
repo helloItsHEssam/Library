@@ -11,9 +11,21 @@ import Alamofire
 
 final class ApiTests: XCTestCase {
  
+    private var api: Api!
+    
+    override func setUp() {
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [MockURLProtocol.self]
+        api = ApiImpl(configuration: configuration)
+    }
+    
+    override func tearDown() {
+        api = nil
+    }
+    
     func testApiAllBook() async {
         do {
-            let response = try await ApiImpl.default.callApi(route: .favoriteBooks)
+            let response = try await api.callApi(route: .favoriteBooks)
             let books = try JSONDecoder().decode([BookDto].self,
                                                               from: response)
             XCTAssertEqual(books.count, 2)
@@ -26,7 +38,7 @@ final class ApiTests: XCTestCase {
     
     func testViewBook() async {
         do {
-            let response = try await ApiImpl.default.callApi(route: .viewBook(bookId: 3))
+            let response = try await api.callApi(route: .viewBook(bookId: 3))
             let book = try JSONDecoder().decode(BookDto.self,
                                                               from: response)
             XCTAssertEqual(book.id, 1)
@@ -39,7 +51,7 @@ final class ApiTests: XCTestCase {
     
     func testViewNotExistBook() async {
         do {
-            _ = try await ApiImpl.default.callApi(route: .viewBook(bookId: 12))
+            _ = try await api.callApi(route: .viewBook(bookId: 12))
 
         } catch {
             XCTAssertNotNil(error as? AFError)
