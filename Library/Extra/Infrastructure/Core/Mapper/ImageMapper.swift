@@ -10,15 +10,15 @@ import Foundation
 final class ImageMapper: Mapper {
     
     typealias Dto = ImageDto?
-    typealias Entity = Image?
+    typealias Entity = ImageURL?
     
-    func mapEntityToDto(input: Image?) -> ImageDto? {
+    func mapEntityToDto(input: ImageURL?) -> ImageDto? {
         guard let input else { return nil }
         return ImageDto(id: input.id, url: input.url)
     }
     
-    func mapDtoToEntity(input: ImageDto?) -> Image? {
+    func mapDtoToEntity(input: ImageDto?) -> ImageURL? {
         guard let input else { return nil }
-        return Image(id: input.id, url: input.url)
+        return ImageURL(id: input.id, url: input.url)
     }
 }

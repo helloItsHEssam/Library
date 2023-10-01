@@ -23,7 +23,7 @@ final class ImageMapperTests: XCTestCase {
     func testMapToDto() {
         
         // given
-        let image = Image(id: 1, url: "1.jpg")
+        let image = ImageURL(id: 1, url: "1.jpg")
         
         // when
         let imageDto = mapper?.mapEntityToDto(input: image)
