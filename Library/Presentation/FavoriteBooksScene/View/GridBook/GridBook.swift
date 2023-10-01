@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct GridBook: View {
-
-    private let gridItemLayout = Array(repeating: GridItem(.flexible(),
-                                                           spacing: 20,
-                                                           alignment: .center),
-                                       count: 3)
+    typealias ItemTappedType = (Book) -> Void
     
-    let books: [Book] = [] // empty data
+    private let itemLayout = GridItem(.flexible(), spacing: 20,
+                                      alignment: .center)
+    
+    private var books: [Book]
+    private var itemTapped: ItemTappedType
+    
+    init(books: [Book],
+         itemTapped callback: @escaping ItemTappedType) {
+        self.books = books
+        self.itemTapped = callback
+    }
+    
     var body: some View {
+        let gridItemLayout = Array(repeating: itemLayout, count: 3)
+        
         LazyVGrid(columns: gridItemLayout, spacing: 20) {
             ForEach(books) { book in
                 GridBookItem(book: book)
                     .onTapGesture {
-                        
+                        itemTapped(book)
                     }
             }
         }

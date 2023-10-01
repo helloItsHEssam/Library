@@ -16,9 +16,17 @@ struct BookImage: View {
     }
 
     var body: some View {
-        Image("1")
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(12)
+        let url = URL(string: imageUrl?.url ?? "")
+        AsyncImage(url: url) { image in
+            image
+                .resizable()
+                .scaledToFit()
+
+        } placeholder: {
+            Image("placeholder")
+                .resizable()
+                .scaledToFit()
+        }
+        .cornerRadius(12)
     }
 }

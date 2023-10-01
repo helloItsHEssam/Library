@@ -63,6 +63,11 @@
 		DE89DF2F2AC964D80076EE57 /* NameOfBookText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF2E2AC964D80076EE57 /* NameOfBookText.swift */; };
 		DE89DF332AC966CE0076EE57 /* GridBookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF322AC966CE0076EE57 /* GridBookItem.swift */; };
 		DE89DF362AC969920076EE57 /* GridBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF352AC969920076EE57 /* GridBook.swift */; };
+		DE89DF382AC9708B0076EE57 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF372AC9708B0076EE57 /* BookViewModel.swift */; };
+		DE89DF3B2AC97CD30076EE57 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF3A2AC97CD30076EE57 /* Alert.swift */; };
+		DE89DF3D2AC97D140076EE57 /* MesageAlertText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF3C2AC97D140076EE57 /* MesageAlertText.swift */; };
+		DE89DF3F2AC97FFE0076EE57 /* AlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF3E2AC97FFE0076EE57 /* AlertContent.swift */; };
+		DE89DF412AC981130076EE57 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF402AC981120076EE57 /* AlertButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +147,11 @@
 		DE89DF2E2AC964D80076EE57 /* NameOfBookText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOfBookText.swift; sourceTree = "<group>"; };
 		DE89DF322AC966CE0076EE57 /* GridBookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBookItem.swift; sourceTree = "<group>"; };
 		DE89DF352AC969920076EE57 /* GridBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBook.swift; sourceTree = "<group>"; };
+		DE89DF372AC9708B0076EE57 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		DE89DF3A2AC97CD30076EE57 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		DE89DF3C2AC97D140076EE57 /* MesageAlertText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesageAlertText.swift; sourceTree = "<group>"; };
+		DE89DF3E2AC97FFE0076EE57 /* AlertContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContent.swift; sourceTree = "<group>"; };
+		DE89DF402AC981120076EE57 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +536,7 @@
 		DE89DF142AC947590076EE57 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DE89DF372AC9708B0076EE57 /* BookViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -601,6 +612,7 @@
 		DE89DF252AC94E270076EE57 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				DE89DF392AC97CC00076EE57 /* AlertView */,
 				DE89DF262AC94E400076EE57 /* TitleText.swift */,
 				DE89DF282AC959850076EE57 /* ViewAlignment.swift */,
 				DE89DF2A2AC95BF80076EE57 /* BookImage.swift */,
@@ -617,6 +629,17 @@
 				DE89DF352AC969920076EE57 /* GridBook.swift */,
 			);
 			path = GridBook;
+			sourceTree = "<group>";
+		};
+		DE89DF392AC97CC00076EE57 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DE89DF3A2AC97CD30076EE57 /* Alert.swift */,
+				DE89DF3C2AC97D140076EE57 /* MesageAlertText.swift */,
+				DE89DF3E2AC97FFE0076EE57 /* AlertContent.swift */,
+				DE89DF402AC981120076EE57 /* AlertButton.swift */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,6 +793,7 @@
 				DE0432722AC82F6400748682 /* Mapper.swift in Sources */,
 				DE0432662AC82D1200748682 /* BookRepository.swift in Sources */,
 				DE89DF2D2AC9637D0076EE57 /* NameOfAuthorText.swift in Sources */,
+				DE89DF3D2AC97D140076EE57 /* MesageAlertText.swift in Sources */,
 				DE25F68D2AC76EB70085D4C6 /* Raleway.swift in Sources */,
 				DE04327E2AC8327F00748682 /* PersonDto.swift in Sources */,
 				DE89DF332AC966CE0076EE57 /* GridBookItem.swift in Sources */,
@@ -780,14 +804,18 @@
 				DE89DF292AC959850076EE57 /* ViewAlignment.swift in Sources */,
 				DE89DF362AC969920076EE57 /* GridBook.swift in Sources */,
 				DE89DF182AC947830076EE57 /* FavoriteBooks.swift in Sources */,
+				DE89DF3F2AC97FFE0076EE57 /* AlertContent.swift in Sources */,
 				DE0432592AC8079600748682 /* Api.swift in Sources */,
 				DE89DF092AC9350C0076EE57 /* GeneralError.swift in Sources */,
 				DE04327A2AC8326F00748682 /* BookDto.swift in Sources */,
 				DE04325B2AC807AE00748682 /* ApiImpl.swift in Sources */,
+				DE89DF412AC981130076EE57 /* AlertButton.swift in Sources */,
 				DE89DF272AC94E400076EE57 /* TitleText.swift in Sources */,
 				DE0432852AC8331D00748682 /* PersonMapper.swift in Sources */,
+				DE89DF382AC9708B0076EE57 /* BookViewModel.swift in Sources */,
 				DE25F6542AC7662B0085D4C6 /* LibraryApp.swift in Sources */,
 				DE04325E2AC807C800748682 /* ApiRouter.swift in Sources */,
+				DE89DF3B2AC97CD30076EE57 /* Alert.swift in Sources */,
 				DE0432742AC82F8F00748682 /* Book.swift in Sources */,
 				DE0432692AC82D2C00748682 /* BookUseCase.swift in Sources */,
 				DE0432812AC8331000748682 /* BookMapper.swift in Sources */,
