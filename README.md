@@ -5,7 +5,7 @@ A simple project with Swift UI. In this project, it displays a list of favorite 
 ## Screenshots 🌃
 favorite Books           |  Detail of Book  
 :-------------------------:|:-------------------------:
-<img alt="favorite books" src="Screenshots/Screenshot_list.png">|<img alt="Reminder detail" src="Screenshots/Screenshot_detail.png">
+<img alt="favorite books" src="Screenshot_list.png">|<img alt="Reminder detail" src="Screenshot_detail.png">
 
 ## The tech stack used in this project 🛠
 
