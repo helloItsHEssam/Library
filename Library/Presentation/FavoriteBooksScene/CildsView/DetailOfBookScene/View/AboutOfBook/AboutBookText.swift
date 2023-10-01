@@ -1,5 +1,5 @@
 //
-//  NameOfBookText.swift
+//  AboutBookText.swift
 //  Library
 //
 //  Created by Hessam Mahdiabadi on 10/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NameOfBookText: View {
+struct AboutBookText: View {
 
     private var content: String
 
@@ -17,8 +17,8 @@ struct NameOfBookText: View {
     
     var body: some View {
         Text(content)
-            .font(.custom(Raleway.weight(.regular), size: 12))
-            .lineLimit(1)
+            .font(.custom(Raleway.weight(.regular), size: 16))
+            .lineSpacing(2)
             .foregroundColor(.primaryText)
     }
 }
