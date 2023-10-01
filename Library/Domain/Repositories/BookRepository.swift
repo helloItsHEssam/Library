@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol BookRepository {
+
+    func allBooks() async throws -> [BookDto]
+    func viewBook(bookId id: Int) async throws -> BookDto
+}

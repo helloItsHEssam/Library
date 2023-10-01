@@ -25,7 +25,7 @@ final class BookMapperTests: XCTestCase {
     func testMapToDto() {
         
         // given
-        let image = Image(id: 1, url: "1.jpg")
+        let image = ImageURL(id: 1, url: "1.jpg")
         let person = Person(id: 11, name: "alexander",
                             image: image, description: "lorem ipsum")
         let book = Book(id: 111,
@@ -49,7 +49,7 @@ final class BookMapperTests: XCTestCase {
     func testArrayMapToDto() {
         
         // given
-        let image = Image(id: 1, url: "1.jpg")
+        let image = ImageURL(id: 1, url: "1.jpg")
         let person = Person(id: 11, name: "alexander",
                             image: image, description: "lorem ipsum")
         let book1 = Book(id: 111,

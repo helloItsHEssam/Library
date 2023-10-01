@@ -15,7 +15,7 @@ struct Book: Identifiable, Equatable {
     var description: String
     var price: Double
     var language: String
-    var image: Image?
+    var image: ImageURL?
     var author: Person
     
     static func == (lhs: Book, rhs: Book) -> Bool {

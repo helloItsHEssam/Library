@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol BookUseCase {
+ 
+    func allBooks() async throws -> [Book]
+    func viewBook(bookId id: Int) async throws -> Book
+}

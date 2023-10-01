@@ -11,7 +11,7 @@ struct Person: Identifiable, Equatable {
 
     var id: Int
     var name: String
-    var image: Image?
+    var image: ImageURL?
     var description: String
     
     static func == (lhs: Person, rhs: Person) -> Bool {
