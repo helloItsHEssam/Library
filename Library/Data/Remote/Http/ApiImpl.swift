@@ -13,7 +13,7 @@ final class ApiImpl: Api {
     private var sessionManager: Session
     
 #if DEBUG
-    required init(configuration: URLSessionConfiguration) {
+    init(configuration: URLSessionConfiguration) {
         sessionManager = Session(configuration: configuration)
     }
 #endif
@@ -27,7 +27,12 @@ final class ApiImpl: Api {
             sessionManager.request(route)
                 .validate(statusCode: 200 ..< 300)
                 .responseData { response in
-                    continuation.resume(with: response.result)
+                    switch response.result {
+                    case .success(let data):
+                        continuation.resume(returning: data)
+                    case .failure:
+                        continuation.resume(throwing: GeneralError.cannotConnectToServer)
+                    }
                 }
         }
     }

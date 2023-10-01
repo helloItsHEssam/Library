@@ -49,6 +49,8 @@
 		DE25F68D2AC76EB70085D4C6 /* Raleway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE25F68C2AC76EB70085D4C6 /* Raleway.swift */; };
 		DE25F6912AC76F560085D4C6 /* Color+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE25F6902AC76F560085D4C6 /* Color+theme.swift */; };
 		DE25F6962AC770000085D4C6 /* RalewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE25F6952AC770000085D4C6 /* RalewayTests.swift */; };
+		DE89DF092AC9350C0076EE57 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF082AC9350C0076EE57 /* GeneralError.swift */; };
+		DE89DF0C2AC935640076EE57 /* BookRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DF0B2AC935640076EE57 /* BookRepositoryImplTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		DE25F68C2AC76EB70085D4C6 /* Raleway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raleway.swift; sourceTree = "<group>"; };
 		DE25F6902AC76F560085D4C6 /* Color+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+theme.swift"; sourceTree = "<group>"; };
 		DE25F6952AC770000085D4C6 /* RalewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RalewayTests.swift; sourceTree = "<group>"; };
+		DE89DF082AC9350C0076EE57 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
+		DE89DF0B2AC935640076EE57 /* BookRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryImplTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				DE04326C2AC82D4400748682 /* Book */,
-				DE04326F2AC82F5400748682 /* Extra */,
 				DE0432552AC8073C00748682 /* Remote */,
 			);
 			path = Data;
@@ -218,7 +221,7 @@
 		DE04325F2AC8108800748682 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DE0432862AC836A300748682 /* Extra */,
+				DE89DF0A2AC9354B0076EE57 /* Book */,
 				DE0432602AC8108B00748682 /* Remote */,
 			);
 			path = Data;
@@ -262,14 +265,6 @@
 			path = Book;
 			sourceTree = "<group>";
 		};
-		DE04326F2AC82F5400748682 /* Extra */ = {
-			isa = PBXGroup;
-			children = (
-				DE0432702AC82F5D00748682 /* Mapper */,
-			);
-			path = Extra;
-			sourceTree = "<group>";
-		};
 		DE0432702AC82F5D00748682 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,14 +274,6 @@
 				DE0432712AC82F6400748682 /* Mapper.swift */,
 			);
 			path = Mapper;
-			sourceTree = "<group>";
-		};
-		DE0432862AC836A300748682 /* Extra */ = {
-			isa = PBXGroup;
-			children = (
-				DE0432872AC836A700748682 /* Mapper */,
-			);
-			path = Extra;
 			sourceTree = "<group>";
 		};
 		DE0432872AC836A700748682 /* Mapper */ = {
@@ -412,6 +399,8 @@
 		DE25F6892AC76E930085D4C6 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				DE0432702AC82F5D00748682 /* Mapper */,
+				DE89DF072AC934FF0076EE57 /* Error */,
 				DE25F68A2AC76E950085D4C6 /* Font */,
 			);
 			path = Infrastructure;
@@ -452,6 +441,7 @@
 		DE25F6932AC76FDE0085D4C6 /* Infrastructire */ = {
 			isa = PBXGroup;
 			children = (
+				DE0432872AC836A700748682 /* Mapper */,
 				DE25F6942AC76FED0085D4C6 /* Font */,
 			);
 			path = Infrastructire;
@@ -463,6 +453,22 @@
 				DE25F6952AC770000085D4C6 /* RalewayTests.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		DE89DF072AC934FF0076EE57 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DE89DF082AC9350C0076EE57 /* GeneralError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DE89DF0A2AC9354B0076EE57 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				DE89DF0B2AC935640076EE57 /* BookRepositoryImplTests.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,6 +624,7 @@
 				DE0432762AC830A500748682 /* Image.swift in Sources */,
 				DE04327C2AC8327800748682 /* ImageDto.swift in Sources */,
 				DE0432592AC8079600748682 /* Api.swift in Sources */,
+				DE89DF092AC9350C0076EE57 /* GeneralError.swift in Sources */,
 				DE04327A2AC8326F00748682 /* BookDto.swift in Sources */,
 				DE04325B2AC807AE00748682 /* ApiImpl.swift in Sources */,
 				DE0432852AC8331D00748682 /* PersonMapper.swift in Sources */,
@@ -642,6 +649,7 @@
 				DE04329E2AC8607400748682 /* ApiMockResponseTests.swift in Sources */,
 				DE04328D2AC839E500748682 /* BookMapperTests.swift in Sources */,
 				DE04328B2AC8389300748682 /* PersonMapperTests.swift in Sources */,
+				DE89DF0C2AC935640076EE57 /* BookRepositoryImplTests.swift in Sources */,
 				DE0432942AC83C8D00748682 /* PersonTests.swift in Sources */,
 				DE0432982AC83F8B00748682 /* ApiTests.swift in Sources */,
 				DE25F6962AC770000085D4C6 /* RalewayTests.swift in Sources */,

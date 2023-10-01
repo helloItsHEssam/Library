@@ -54,7 +54,7 @@ final class ApiTests: XCTestCase {
             _ = try await api.callApi(route: .viewBook(bookId: 12))
 
         } catch {
-            XCTAssertNotNil(error as? AFError)
+            XCTAssertNotNil(error as? GeneralError)
         }
     }
 }

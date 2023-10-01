@@ -114,7 +114,17 @@ final class MockURLProtocol: URLProtocol {
         let bookResponse = ApiMockResponse(url: url3, data: data3,
                                                httpResponse: httpResponse3,
                                                error: nil)
+        
+        let strUrl4 = "http://localhost:8080/book/15"
+        let url4 = URL(string: strUrl4)!
+        let data4 = "Wrong json Input".data(using: .utf8)
+        let httpResponse4 = HTTPURLResponse(url: url4, statusCode: 200,
+                                           httpVersion: nil, headerFields: nil)
+        let invalidJsonResponse = ApiMockResponse(url: url4, data: data4,
+                                               httpResponse: httpResponse4,
+                                               error: nil)
 
-        return [url: notFoundResponse, url2: booksResponse, url3: bookResponse]
+        return [url: notFoundResponse, url2: booksResponse,
+               url3: bookResponse, url4: invalidJsonResponse]
     }
 }
