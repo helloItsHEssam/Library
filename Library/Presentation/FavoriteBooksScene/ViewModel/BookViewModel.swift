@@ -14,6 +14,12 @@ final class BookViewModel: ObservableObject {
 
     private var useCase: BookUseCase!
     
+    #if DEBUG
+    init(useCase: BookUseCase) {
+        self.useCase = useCase
+    }
+    #endif
+
     init() {
         let api = ApiImpl()
         let repository = BookRepositoryImpl(api: api)
@@ -36,7 +42,9 @@ final class BookViewModel: ObservableObject {
     }
     
     @MainActor private func updateErrorState(message: String) {
-        self.error.message = message
-        self.error.show.toggle()
+        var copyError = self.error
+        copyError.show.toggle()
+        copyError.message = message
+        self.error = copyError
     }
 }

@@ -19,7 +19,7 @@ struct FavoriteBooks: View {
                     VStack(alignment: .leading, spacing: 32) {
                         TitleText(content: "Favorite Books")
                         GridBook(books: viewModel.books) { bookTapped in
-                            // TODO: go to detail page
+                            navigationManager.goToDetailOfBookPage()
                         }
                     }
                 }
@@ -31,6 +31,11 @@ struct FavoriteBooks: View {
                 Alert(content: $viewModel.error) {
                     viewModel.fetchFavoriteBooks()
                 }
+            }
+        }
+        .navigationDestination(for: NavigationRouter.self) { route in
+            switch route {
+            case .detailOfBookScene: DetailOfBook()
             }
         }
         .environmentObject(navigationManager)
